@@ -1,5 +1,10 @@
 public class RansomNote {
     public Boolean harmlessRansomNote(String message , String magazineText){
-        return null;
+        for (String word : message.split(" ")) {
+            if (!magazineText.contains(word)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
